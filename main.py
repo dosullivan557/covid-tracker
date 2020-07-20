@@ -17,8 +17,6 @@ def getCountryApi(country):
         if eachCountry['Country'] == country:
             return eachCountry['Slug']
 
-
-
 def getCountryStats(*args):
     countryName = getCountryApi(tkvar.get())
     URL="https://api.covid19api.com/live/country/"+countryName
@@ -35,7 +33,6 @@ def getCountryStats(*args):
         recoveredLabel['text'] = data['Recovered']
         deathsLabel['text'] = data['Deaths']
         activeLabel['text']  = data['Active']
-
 
 root = Tk()
 root.title("Covid tracker")
@@ -79,6 +76,5 @@ confirmedLabel.grid(row=5, column=2)
 recoveredLabel.grid(row=6, column=2)
 activeLabel.grid(row=7, column=2)
 # on change dropdown value
-
 
 root.mainloop()
